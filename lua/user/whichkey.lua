@@ -96,7 +96,6 @@ local mappings = {
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>bdelete<CR>", "Close Buffer" },
 	["X"] = { "<cmd>%bd|e#|bd#<CR>", "Close All Buffers" },
-
 	-- Ignore keymaps managed outside of which-key
 	["<space>"] = "which_key_ignore",
 	["p"] = "which_key_ignore",
@@ -104,7 +103,6 @@ local mappings = {
 	["y"] = "which_key_ignore",
 	["Y"] = "which_key_ignore",
 	["d"] = "which_key_ignore",
-
 	g = {
 		name = "Git",
 		b = { "<cmd>Git blame<cr>", "Blame" },
@@ -128,7 +126,6 @@ local mappings = {
 		},
 		o = { "<cmd>GBrowse<cr>", "Open in Browser" },
 	},
-
 	h = {
 		name = "Harpoon",
 		["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "which_key_ignore" },
@@ -145,7 +142,6 @@ local mappings = {
 		n = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Next" },
 		p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Prev" },
 	},
-
 	l = {
 		name = "LSP",
 		d = {
@@ -174,7 +170,6 @@ local mappings = {
 			"Workspace Symbols",
 		},
 	},
-
 	M = {
 		name = "Plugin Manager",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -183,14 +178,12 @@ local mappings = {
 		S = { "<cmd>PackerStatus<cr>", "Status" },
 		u = { "<cmd>PackerUpdate<cr>", "Update" },
 	},
-
 	q = {
 		name = "Quit",
 		a = { "<cmd>qa<CR>", "Current All" },
 		o = { "<C-w><C-o>", "Others" },
 		q = { "<cmd>q<CR>", "Current Window" },
 	},
-
 	s = {
 		name = "Search",
 		c = { "<cmd>Telescope commands<cr>", "Commands" },
@@ -208,29 +201,27 @@ local mappings = {
 		},
 		["'"] = { "<cmd>Telescope registers<cr>", "Registers" },
 	},
-
 	t = {
 		name = "Troubleshoot",
 		d = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Add Diagnostic to Quickfix" },
-        l = {
-            name = "Location List",
-            f = { "<cmd>lfirst<cr>", "Goto First" },
-            l = { "<cmd>llast<cr>", "Goto Last" },
-            n = { "<cmd>lnext<cr>", "Goto Next" },
-            o = { "<cmd>lopen<cr>", "Open Location List" },
-            p = { "<cmd>lprev<cr>", "Goto Prev" },
-            s = { "<cmd>Telescope loclist<cr>", "Search Location List" },
-        },
+		l = {
+			name = "Location List",
+			f = { "<cmd>lfirst<cr>", "Goto First" },
+			l = { "<cmd>llast<cr>", "Goto Last" },
+			n = { "<cmd>lnext<cr>", "Goto Next" },
+			o = { "<cmd>lopen<cr>", "Open Location List" },
+			p = { "<cmd>lprev<cr>", "Goto Prev" },
+			s = { "<cmd>Telescope loclist<cr>", "Search Location List" },
+		},
 		q = {
-            name = "Quickfix List",
-            f = { "<cmd>cfirst<cr>", "Goto First" },
-            l = { "<cmd>clast<cr>", "Goto Last" },
-            n = { "<cmd>cnext<cr>", "Goto Next" },
-            o = { "<cmd>copen<cr>", "Open Quickfix List" },
-            p = { "<cmd>cprev<cr>", "Goto Prev" },
-            s = { "<cmd>Telescope quickfix<cr>", "Search Quickfix List" },
-
-        },
+			name = "Quickfix List",
+			f = { "<cmd>cfirst<cr>", "Goto First" },
+			l = { "<cmd>clast<cr>", "Goto Last" },
+			n = { "<cmd>cnext<cr>", "Goto Next" },
+			o = { "<cmd>copen<cr>", "Open Quickfix List" },
+			p = { "<cmd>cprev<cr>", "Goto Prev" },
+			s = { "<cmd>Telescope quickfix<cr>", "Search Quickfix List" },
+		},
 		u = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
 	},
 }
