@@ -105,6 +105,7 @@ require("packer").startup(function(use)
     use("lukas-reineke/indent-blankline.nvim") -- Add indentation guides even on blank lines
     use("folke/tokyonight.nvim") -- Colorscheme
     use("RRethy/vim-illuminate") -- highlight cursor word
+	use("mechatroner/rainbow_csv") -- csv highlighter
 
 	if is_bootstrap then
 		require("packer").sync()
