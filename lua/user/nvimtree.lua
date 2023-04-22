@@ -24,7 +24,7 @@ local function on_attach(bufnr)
 	vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Directory"))
 	vim.keymap.set("n", "<C-e>", api.node.open.horizontal, opts("Open: Horizontal Split"))
 	vim.keymap.set("n", "<C-v>", api.node.open.vertical, opts("Open: Vertical Split"))
-	vim.keymap.set("n", "<C-f>", api.node.show_info_popup, opts("Info"))
+	vim.keymap.set("n", "<C-p>", api.node.show_info_popup, opts("Info"))
 end
 
 nvim_tree.setup({
