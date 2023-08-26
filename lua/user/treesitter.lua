@@ -21,7 +21,6 @@ configs.setup({
 		-- "typescript",
 		-- "terraform",
 		"yaml",
-		"help",
 		"vim",
 	},
 	highlight = { enable = true },
