@@ -96,13 +96,20 @@ local mappings = {
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["x"] = { "<cmd>bdelete<CR>", "Close Buffer" },
 	["X"] = { "<cmd>%bd|e#|bd#<CR>", "Close All Buffers" },
+
 	-- Ignore keymaps managed outside of which-key
 	["<space>"] = "which_key_ignore",
 	["p"] = "which_key_ignore",
 	["P"] = "which_key_ignore",
 	["y"] = "which_key_ignore",
 	["Y"] = "which_key_ignore",
-	["d"] = "which_key_ignore",
+
+	d = {
+		name = "Diff Files",
+		o = { "<cmd>windo diffthis<cr>", "Open Diff View" },
+		c = { "<cmd>windo diffoff<cr>", "Close Diff View" },
+	},
+
 	g = {
 		name = "Git",
 		b = { "<cmd>Git blame<cr>", "Blame" },
@@ -113,8 +120,6 @@ local mappings = {
 			"Diff",
 		},
 		g = { "<cmd>Git<cr>", "Git Status" },
-		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 		l = { "<cmd>Git log --graph<cr>", "Commit Logs" },
 		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
 		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
@@ -126,6 +131,7 @@ local mappings = {
 		},
 		o = { "<cmd>GBrowse<cr>", "Open in Browser" },
 	},
+
 	h = {
 		name = "Harpoon",
 		["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "which_key_ignore" },
@@ -138,10 +144,11 @@ local mappings = {
 		["8"] = { "<cmd>lua require('harpoon.ui').nav_file(8)<cr>", "which_key_ignore" },
 		["9"] = { "<cmd>lua require('harpoon.ui').nav_file(9)<cr>", "which_key_ignore" },
 		a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add File" },
-		e = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Explorer" },
+		h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Explorer" },
 		n = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Next" },
 		p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Prev" },
 	},
+
 	l = {
 		name = "LSP",
 		d = {
@@ -170,6 +177,7 @@ local mappings = {
 			"Workspace Symbols",
 		},
 	},
+
 	M = {
 		name = "Plugin Manager",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -178,12 +186,14 @@ local mappings = {
 		S = { "<cmd>PackerStatus<cr>", "Status" },
 		u = { "<cmd>PackerUpdate<cr>", "Update" },
 	},
+
 	q = {
 		name = "Quit",
 		a = { "<cmd>qa<CR>", "Current All" },
 		o = { "<C-w><C-o>", "Others" },
 		q = { "<cmd>q<CR>", "Current Window" },
 	},
+
 	s = {
 		name = "Search",
 		c = { "<cmd>Telescope commands<cr>", "Commands" },
@@ -201,6 +211,7 @@ local mappings = {
 		},
 		["'"] = { "<cmd>Telescope registers<cr>", "Registers" },
 	},
+
 	t = {
 		name = "Troubleshoot",
 		d = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Add Diagnostic to Quickfix" },

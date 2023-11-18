@@ -29,6 +29,10 @@ keymap("", "<leader>d", [["_d]], opts)
 keymap("", "<C-f>", "<Nop>", opts)
 keymap("", "<C-b>", "<Nop>", opts)
 
+-- Switch betwen horizontal and vertical split
+keymap("", "<C-w>-", "<C-w>K", opts)
+keymap("", "<C-w>|", "<C-w>H", opts)
+
 -- Disable Shift+K to open document
 keymap("n", "K", "<Nop>", opts)
 
@@ -61,8 +65,12 @@ keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 
 -- Git diffget from left or right
-keymap("n", "ge", "<cmd>diffget //2<CR>", opts)
-keymap("n", "gi", "<cmd>diffget //3<CR>", opts)
+keymap("n", "gt", "<cmd>diffget //2<CR>", opts)
+keymap("n", "gy", "<cmd>diffget //3<CR>", opts)
+
+-- Git jump to prev and next hunk
+keymap("n", "(", "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", opts)
+keymap("n", ")", "<cmd>lua require 'gitsigns'.next_hunk()<cr>", opts)
 
 -- Turn Markdown Previewer On/Off
 keymap("", "<F6>", "<Plug>MarkdownPreview", opts)
@@ -76,3 +84,6 @@ keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Disable <leader>u to turn selection to lowercase
+keymap("v", "<leader>u", "<Nop>", opts)

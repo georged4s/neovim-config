@@ -10,8 +10,8 @@ local function on_attach(bufnr)
 		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
 	end
 
-    -- default keybinds
-    api.config.mappings.default_on_attach(bufnr)
+	-- default keybinds
+	api.config.mappings.default_on_attach(bufnr)
 
 	-- remove keymaps
 	vim.keymap.set("n", "<C-k>", "", { buffer = bufnr })
@@ -25,6 +25,10 @@ local function on_attach(bufnr)
 	vim.keymap.set("n", "<C-e>", api.node.open.horizontal, opts("Open: Horizontal Split"))
 	vim.keymap.set("n", "<C-v>", api.node.open.vertical, opts("Open: Vertical Split"))
 	vim.keymap.set("n", "<C-p>", api.node.show_info_popup, opts("Info"))
+	vim.keymap.set("n", "(", api.node.navigate.git.prev, opts("Previous Git"))
+	vim.keymap.set("n", ")", api.node.navigate.git.next, opts("Next Git"))
+	vim.keymap.set("n", "{", api.node.navigate.sibling.prev, opts("Previous Sibling"))
+	vim.keymap.set("n", "}", api.node.navigate.sibling.next, opts("Next Sibling"))
 end
 
 nvim_tree.setup({
@@ -73,6 +77,6 @@ nvim_tree.setup({
 	},
 	view = {
 		width = 35,
-		side = "left"
-	}
+		side = "left",
+	},
 })
