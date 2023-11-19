@@ -28,7 +28,6 @@ tokyonight.setup({
     -- Change the "hint" color to the "orange" color, and make the "error" color bright red
     on_colors = function(colors)
         colors.comment = "#737aa2"          --colors.dark5
-        -- colors.terminal_black = "#828bb8"   --colors.fg_dark
         colors.fg_gutter = "#545c7e"        --colors.dark3
         colors.git = {
             change = "#86e1fc",             --colors.cyan
@@ -42,7 +41,7 @@ tokyonight.setup({
         }
     end,
 
-    on_highlights = function(highlights, _)
+    on_highlights = function(highlights, c)
         highlights.CursorLine = {
             bg = "#444a73", --colors.terminal_black
         }
@@ -52,6 +51,9 @@ tokyonight.setup({
         highlights.GitSignsCurrentLineBlame = {
             fg = "#828bb8", --colors.fg_dark
         }
+		highlights.DiagnosticUnnecessary = {
+			fg = c.comment, --colors.terminal_black
+		}
     end,
 })
 
