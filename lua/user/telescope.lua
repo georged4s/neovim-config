@@ -32,7 +32,6 @@ telescope.setup({
 				["<C-d>"] = actions.preview_scrolling_down,
 				["<PageUp>"] = actions.results_scrolling_up,
 				["<PageDown>"] = actions.results_scrolling_down,
-				["?"] = actions.which_key, -- keys from pressing <C-/>
 			},
 			n = {
 				["<esc>"] = actions.close,
@@ -57,7 +56,6 @@ telescope.setup({
 				["<C-d>"] = actions.preview_scrolling_down,
 				["<PageUp>"] = actions.results_scrolling_up,
 				["<PageDown>"] = actions.results_scrolling_down,
-				["?"] = actions.which_key,
 			},
 		},
 	},
