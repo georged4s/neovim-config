@@ -6,13 +6,11 @@
 local servers = {
 	"bashls",
 	"dockerls",
-	-- "cssls",
-	-- "html",
-	-- "tsserver",
 	"jsonls",
 	"pyright",
 	"lua_ls",
 	"yamlls",
+	"volar",
 }
 
 local settings = {
