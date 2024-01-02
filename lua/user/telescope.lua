@@ -17,8 +17,8 @@ telescope.setup({
 		file_ignore_patterns = { "^.git/", "secret", "Session.vim" },
 		mappings = {
 			i = {
-				["<C-n>"] = actions.cycle_history_next,
-				["<C-p>"] = actions.cycle_history_prev,
+				-- ["<C-n>"] = actions.cycle_history_next,
+				-- ["<C-p>"] = actions.cycle_history_prev,
 				["<Down>"] = actions.move_selection_next,
 				["<Up>"] = actions.move_selection_previous,
 				["<CR>"] = actions.select_default,
@@ -108,9 +108,10 @@ telescope.setup({
 			mappings = {
 				i = {
 					["<C-k>"] = lga_actions.quote_prompt(),
-					["<C-f>"] = lga_actions.quote_prompt({ postfix = " -F" }),
-					["<C-a>"] = lga_actions.quote_prompt({ postfix = " --iglob=" }),
-					["<C-w>"] = lga_actions.quote_prompt({ postfix = " -w" }),
+					["<C-f>"] = lga_actions.quote_prompt({ postfix = " -F" }), --fixed-strings: Treat the pattern as a literal string instead of a regular expression.
+					["<C-a>"] = lga_actions.quote_prompt({ postfix = " -g=" }), --glob: Include or exclude files and directories for searching that match the given glob.
+					["<C-w>"] = lga_actions.quote_prompt({ postfix = " -w" }), --word-regexp: Only show matches surrounded by word boundaries.
+					["<C-n>"] = lga_actions.quote_prompt({ postfix = " -u" }), --unrestricted: -u = --no-ignore, -uu = --hidden
 				},
 			},
 		},
