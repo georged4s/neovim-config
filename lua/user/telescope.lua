@@ -120,4 +120,4 @@ telescope.setup({
 
 -- Enable telescope extensions
 pcall(telescope.load_extension, "live_grep_args")
-pcall(telescope.load_extension, "fzf")
+-- pcall(telescope.load_extension, "fzf")
