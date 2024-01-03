@@ -14,7 +14,7 @@ telescope.setup({
 		prompt_prefix = " ",
 		selection_caret = " ",
 		path_display = { shorten = { len = 5, exclude = { -1, -2, -3 } } },
-		file_ignore_patterns = { "^.git/", "secret", "Session.vim" },
+		file_ignore_patterns = { "^.git/", "secret", "node_modules", "Session.vim" },
 		mappings = {
 			i = {
 				-- ["<C-n>"] = actions.cycle_history_next,
