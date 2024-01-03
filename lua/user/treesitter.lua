@@ -1,48 +1,47 @@
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
-	return
+    return
 end
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 configs.setup({
-	-- Add languages to be installed here that you want installed for treesitter
-	ensure_installed = {
-		"bash",
-		"c",
-		"cpp",
-		"dockerfile",
-		-- "go",
-		"lua",
-		"markdown",
-		"markdown_inline",
-		"python",
-		-- "rust",
-		"javascript",
-		"typescript",
-		"toml",
-		"terraform",
-		"sql",
-		"yaml",
-		"vim",
-		"vue",
-	},
-	auto_install = true,
-	indent = { enable = true },
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = { "gitcommit" },
-	},
-	incremental_selection = {
-		enable = true,
-		keymaps = {
-			init_selection = "<c-space>",
-			node_incremental = "<c-space>",
-			scope_incremental = "<c-s>",
-			node_decremental = "<c-backspace>",
-		},
-	},
-	},
+    -- Add languages to be installed here that you want installed for treesitter
+    ensure_installed = {
+        "bash",
+        "c",
+        "cpp",
+        "dockerfile",
+        -- "go",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        -- "rust",
+        "javascript",
+        "typescript",
+        "toml",
+        "terraform",
+        "sql",
+        "yaml",
+        "vim",
+        "vue",
+    },
+    auto_install = true,
+    indent = { enable = true },
+    highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = { "gitcommit" },
+    },
+    incremental_selection = {
+        enable = true,
+        keymaps = {
+            init_selection = "<c-space>",
+            node_incremental = "<c-space>",
+            scope_incremental = "<c-s>",
+            node_decremental = "<c-backspace>",
+        },
+    },
     textobjects = {
         select = {
             enable = true,
