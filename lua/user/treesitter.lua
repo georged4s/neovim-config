@@ -115,16 +115,16 @@ configs.setup({
                 ["[L"] = { query = "@loop.outer", desc = "Prev loop end" },
             },
         },
-        swap = {
-            enable = true,
-            swap_next = {
-                ["<leader>na"] = "@parameter.inner", -- swap parameters/argument with next
-                ["<leader>nm"] = "@function.outer", -- swap function with next
-            },
-            swap_previous = {
-                ["<leader>pa"] = "@parameter.inner", -- swap parameters/argument with prev
-                ["<leader>pm"] = "@function.outer", -- swap function with previous
-            },
-        },
+        -- swap = {
+        --     enable = true,
+        --     swap_next = {
+        --         ["<leader>na"] = "@parameter.inner", -- swap parameters/argument with next
+        --         ["<leader>nm"] = "@function.outer", -- swap function with next
+        --     },
+        --     swap_previous = {
+        --         ["<leader>pa"] = "@parameter.inner", -- swap parameters/argument with prev
+        --         ["<leader>pm"] = "@function.outer", -- swap function with previous
+        --     },
+        -- },
     },
 })
