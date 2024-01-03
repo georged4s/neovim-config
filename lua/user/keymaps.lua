@@ -20,7 +20,8 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Managing copy and pasting using register
-keymap("x", "<leader>p", [["_dp]], opts)
+keymap("x", "<leader>P", [["_dp]], opts)
+keymap("x", "<leader>p", [["_dP]], opts)
 keymap("", "<leader>y", [["+y]], opts)
 keymap("n", "<leader>Y", [["+Y]], opts)
 keymap("", "<leader>d", [["_d]], opts)
