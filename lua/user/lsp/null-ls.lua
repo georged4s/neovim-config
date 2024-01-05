@@ -12,9 +12,11 @@ null_ls.setup({
         formatting.beautysh,
         formatting.black.with({ extra_args = { "--fast" } }),
         formatting.prettierd,
+        formatting.sqlfluff,
         formatting.stylua,
         diagnostics.eslint_d,
         diagnostics.flake8,
         diagnostics.shellcheck,
+        diagnostics.sqlfluff,
     },
 })

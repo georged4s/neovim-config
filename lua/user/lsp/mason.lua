@@ -8,6 +8,7 @@ local servers = {
 	"dockerls",
 	"jsonls",
 	"pyright",
+    "sqls",
 	"lua_ls",
 	"yamlls",
 	"volar",
