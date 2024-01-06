@@ -32,6 +32,7 @@ configs.setup({
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = { "gitcommit" },
+        disable = { "csv" },
     },
     incremental_selection = {
         enable = true,
