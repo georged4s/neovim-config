@@ -83,13 +83,6 @@ M.on_attach = function(client, bufnr)
 	-- Lesser used LSP functionality
 	-- nmap("<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>", "[W]orkspace [A]dd Folder")
 	-- nmap("<leader>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>", "[W]orkspace [R]emove Folder")
-
-	-- Highlight on cursor word
-	local status_ok, illuminate = pcall(require, "illuminate")
-	if not status_ok then
-		return
-	end
-	illuminate.on_attach(client)
 end
 
 return M
