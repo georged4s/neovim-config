@@ -137,9 +137,9 @@ local mappings = {
 
     q = {
         name = "Quit",
-        a = { "<cmd>mksession!<bar>qa<CR>", "Current All" },
+        a = { "<cmd>lua require('defaults').save_and_quit('all')<CR>", "Current All" },
         o = { "<C-w><C-o>", "Others" },
-        q = { "<cmd>mksession!<bar>q<CR>", "Current Window" },
+        q = { "<cmd>lua require('defaults').save_and_quit('single')<CR>", "Current Window" },
     },
 
     s = {
