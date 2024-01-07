@@ -13,5 +13,5 @@ return {
             },
             telemetry = { enable = false },
         },
-    }
+    },
 }
