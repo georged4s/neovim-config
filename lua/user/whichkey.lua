@@ -41,7 +41,8 @@ local mappings = {
     },
     ["n"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
     ["r"] = { "<cmd>Telescope buffers<cr>", "Most Recent Buffers" },
-    ["w"] = { "<cmd>w!<CR>", "Save" },
+    ["w"] = { "<cmd>w!<CR>", "Save File" },
+    ["W"] = { "<cmd>mksession!<CR>", "Save Session" },
     ["x"] = { "<cmd>bdelete<CR>", "Close Buffer" },
     ["X"] = { "<cmd>%bd|e#|bd#<CR>", "Close All Buffers" },
 
