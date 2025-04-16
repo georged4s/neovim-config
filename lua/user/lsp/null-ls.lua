@@ -9,14 +9,18 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
     debug = false,
     sources = {
+        diagnostics.eslint_d,
+        diagnostics.shellcheck,
+        diagnostics.sqlfluff.with({
+            command = "/home/george/miniconda3/envs/sqlfluff/bin/sqlfluff",
+        }),
         formatting.beautysh,
         formatting.black.with({ extra_args = { "--fast" } }),
         formatting.prettierd,
-        formatting.sqlfluff,
         formatting.stylua,
-        diagnostics.eslint_d,
-        diagnostics.flake8,
-        diagnostics.shellcheck,
-        diagnostics.sqlfluff,
+        formatting.sqlfluff.with({
+            command = "/home/george/miniconda3/envs/sqlfluff/bin/sqlfluff",
+            to_temp_file = false,
+        }),
     },
 })
