@@ -28,12 +28,12 @@ require("packer").startup(function(use)
 		"neovim/nvim-lspconfig",
 		requires = {
 			-- Automatically install LSPs to stdpath for neovim
-			"williamboman/mason.nvim",
+            "williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			-- Useful status updates for LSP
 			"j-hui/fidget.nvim",
-			-- Additional lua configuration, makes nvim stuff amazing
-			"folke/neodev.nvim",
+			-- Additional lua configuration0
+			"folke/lazydev.nvim",
 			-- Formatting and Diagnostics
 			"nvimtools/none-ls.nvim",
 		},

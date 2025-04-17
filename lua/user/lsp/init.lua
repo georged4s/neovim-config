@@ -1,5 +1,4 @@
 -- Setup neovim lua configuration
-require("neodev").setup()
 
 require("user.lsp.mason")
 require("user.lsp.handlers").setup()
