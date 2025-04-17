@@ -36,6 +36,8 @@ require("packer").startup(function(use)
 			"folke/lazydev.nvim",
 			-- Formatting and Diagnostics
 			"nvimtools/none-ls.nvim",
+            -- sql editor
+            "nanotee/sqls.nvim"
 		},
 	})
 	-- 3. Snippets
