@@ -1,9 +1,7 @@
 require("user.autocommands")
-require("user.cmp")
 require("user.colorizer")
 require("user.comment")
 require("user.keymaps")
-require("user.lsp")
 require("user.options")
 require("user.variables")
 
