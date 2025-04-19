@@ -8,7 +8,6 @@ require("user.options")
 require("user.telescope")
 require("user.treesitter")
 require("user.variables")
-require("user.whichkey")
 
 require("config.lazy")
 
