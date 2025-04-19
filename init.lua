@@ -11,11 +11,12 @@ require("user.lsp")
 require("user.lualine")
 require("user.nvimtree")
 require("user.options")
-require("user.plugins")
 require("user.telescope")
 require("user.treesitter")
 require("user.variables")
 require("user.whichkey")
+
+require("config.lazy")
 
 -- Allow require to look in after/plugin folder
 local home_dir = os.getenv("HOME")
