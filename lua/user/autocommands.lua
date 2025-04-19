@@ -4,7 +4,7 @@ vim.api.nvim_create_autocmd("FileType", {
     desc = "Press q to quit from certain filetype",
     command = "nnoremap <silent> <buffer> q :close<CR>",
     group = _general_settings,
-    pattern = { "qf", "help", "man", "lspinfo", "git", "fugitiveblame", "fugitive" },
+    pattern = { "qf", "help", "man", "lspinfo", "git", "fugitiveblame", "fugitive", "sqls_output" },
 })
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",
