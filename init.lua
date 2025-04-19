@@ -5,7 +5,6 @@ require("user.comment")
 require("user.keymaps")
 require("user.lsp")
 require("user.options")
-require("user.telescope")
 require("user.treesitter")
 require("user.variables")
 
