@@ -5,8 +5,8 @@ return {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope-live-grep-args.nvim",
             {
-                'nvim-telescope/telescope-fzf-native.nvim',
-                build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release'
+                "nvim-telescope/telescope-fzf-native.nvim",
+                build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
             },
             { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
         },
@@ -18,15 +18,20 @@ return {
 
             -- [[ Configure Telescope ]]
             -- See `:help telescope` and `:help telescope.setup()`
-            telescope.setup {
+            telescope.setup({
                 defaults = {
                     layout_strategy = "vertical",
                     prompt_prefix = " ",
                     selection_caret = " ",
                     path_display = { shorten = { len = 5, exclude = { -1, -2, -3 } } },
-                    file_ignore_patterns = { "^.git/",
-                        "secret", "node_modules/", "Session.vim", "target/index.html",
-                        "target/manifest.json" },
+                    file_ignore_patterns = {
+                        "^.git/",
+                        "secret",
+                        "node_modules/",
+                        "Session.vim",
+                        "target/index.html",
+                        "target/manifest.json",
+                    },
                     mappings = {
                         i = {
                             -- ["<C-n>"] = actions.cycle_history_next,
@@ -106,10 +111,10 @@ return {
                     -- }
                     -- please take a look at the readme of the extension you want to configure
                     fzf = {
-                        fuzzy = true,                   -- false will only do exact matching
+                        fuzzy = true, -- false will only do exact matching
                         override_generic_sorter = true, -- override the generic sorter
-                        override_file_sorter = true,    -- override the file sorter
-                        case_mode = "smart_case",       -- or "ignore_case" or "respect_case". the default case_mode is "smart_case"
+                        override_file_sorter = true, -- override the file sorter
+                        case_mode = "smart_case", -- or "ignore_case" or "respect_case". the default case_mode is "smart_case"
                     },
                     live_grep_args = {
                         prompt_title = "\\Search in Current Workspace/",
@@ -119,15 +124,15 @@ return {
                         mappings = {
                             i = {
                                 ["<C-k>"] = lga_actions.quote_prompt(),
-                                ["<C-x>"] = lga_actions.quote_prompt({ postfix = " -F" }),  --fixed-strings: Treat the pattern as a literal string instead of a regular expression.
+                                ["<C-x>"] = lga_actions.quote_prompt({ postfix = " -F" }), --fixed-strings: Treat the pattern as a literal string instead of a regular expression.
                                 ["<C-a>"] = lga_actions.quote_prompt({ postfix = " -g=" }), --glob: Include or exclude files and directories for searching that match the given glob.
-                                ["<C-w>"] = lga_actions.quote_prompt({ postfix = " -w" }),  --word-regexp: Only show matches surrounded by word boundaries.
-                                ["<C-u>"] = lga_actions.quote_prompt({ postfix = " -u" }),  --unrestricted: -u = --no-ignore, -uu = --hidden
+                                ["<C-w>"] = lga_actions.quote_prompt({ postfix = " -w" }), --word-regexp: Only show matches surrounded by word boundaries.
+                                ["<C-u>"] = lga_actions.quote_prompt({ postfix = " -u" }), --unrestricted: -u = --no-ignore, -uu = --hidden
                             },
                         },
                     },
                 },
-            }
+            })
 
             -- Enable telescope extensions
             pcall(telescope.load_extension, "live_grep_args")
