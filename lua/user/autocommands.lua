@@ -12,13 +12,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.highlight.on_yank({ higroup = "Visual", timeout = 200 })
     end,
     group = _general_settings,
-    pattern = "*",
 })
 vim.api.nvim_create_autocmd("BufWinEnter", {
     desc = "Disable wrapping comment and adding comment leader (#, --, //) when a newline is created",
     command = "set formatoptions-=cro",
     group = _general_settings,
-    pattern = "*",
 })
 vim.api.nvim_create_autocmd("FileType", {
     desc = "Don't should QuickFix list in the buffer",
@@ -67,7 +65,6 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
         end, { buffer = bufnr, remap = false, desc = "Rebase Pull" })
     end,
     group = _git,
-    pattern = "*",
 })
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
     callback = function()
@@ -80,7 +77,6 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
     desc = "Avoid word highlight to jump to the next occurrence in Fugitive",
     end,
     group = _git,
-    pattern = "*",
 })
 
 -- Markdown
@@ -110,14 +106,12 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
     desc = "Equalise buffer window when the Vim window size changes",
     command = "tabdo wincmd =",
     group = _auto_resize,
-    pattern = { "*" },
 })
 local _auto_reload = vim.api.nvim_create_augroup("AutoReload", { clear = true })
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
     desc = "Automatically checks for external file changes and reloads",
     command = "if mode() != 'c' | checktime | endif",
     group = _auto_reload,
-    pattern = { "*" },
 })
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
     callback = function()
@@ -128,5 +122,4 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     end,
     desc = "Automatically update git status shown in fugitive",
     group = _auto_reload,
-    pattern = { "*" },
 })
