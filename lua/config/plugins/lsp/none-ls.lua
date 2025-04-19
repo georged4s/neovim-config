@@ -13,7 +13,7 @@ return {
                     -- diagnostics.shellcheck,
                     diagnostics.sqlfluff.with({
                         command = os.getenv("HOME") .. "/miniconda3/envs/sqlfluff/bin/sqlfluff",
-                        filetype = { "sql" },
+                        extra_args = { "--config", "$ROOT/dbt/.sqlfluff" },
                     }),
                     -- formatting.beautysh,
                     formatting.black.with({ extra_args = { "--fast" } }),
@@ -21,8 +21,7 @@ return {
                     formatting.stylua,
                     formatting.sqlfluff.with({
                         command = os.getenv("HOME") .. "/miniconda3/envs/sqlfluff/bin/sqlfluff",
-                        filetype = { "sql" },
-                        to_temp_file = false,
+                        extra_args = { "--config", "$ROOT/dbt/.sqlfluff" },
                     }),
                 },
             })
