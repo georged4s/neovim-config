@@ -1,6 +1,5 @@
 require("user.autocommands")
 require("user.cmp")
-require("user.colorscheme")
 require("user.colorizer")
 require("user.comment")
 require("user.gitsigns")
