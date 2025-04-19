@@ -39,13 +39,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     group = _git,
     pattern = "gitcommit",
 })
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+vim.api.nvim_create_autocmd({ "FileType" }, {
     desc = "Fugitive specific keymaps",
     callback = function()
-        if vim.bo.ft ~= "fugitive" then
-            return
-        end
-
         local bufnr = vim.api.nvim_get_current_buf()
 
         vim.keymap.set("n", "<leader>f", function()
@@ -65,18 +61,17 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
         end, { buffer = bufnr, remap = false, desc = "Rebase Pull" })
     end,
     group = _git,
+    pattern = "fugitive",
 })
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-    callback = function()
-        if vim.bo.ft ~= "git" then
-            return
-        end
-        local bufnr = vim.api.nvim_get_current_buf()
-        -- disable jumping to the next occurrence
-        vim.keymap.set("n", "*", "<cmd>keepjumps normal! mi*`i<cr>", { buffer = bufnr, remap = false })
+vim.api.nvim_create_autocmd({ "FileType" }, {
     desc = "Avoid word highlight to jump to the next occurrence in Fugitive",
+    callback = function(event)
+        vim.keymap.set("n", "*", "<cmd>keepjumps normal! mi*`i<cr>", { buffer = event.buf, remap = false })
     end,
     group = _git,
+    pattern = { "fugitive", "git" },
+})
+
 })
 
 -- Markdown
@@ -113,13 +108,9 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
     command = "if mode() != 'c' | checktime | endif",
     group = _auto_reload,
 })
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-    callback = function()
-        if vim.bo.ft ~= "fugitive" then
-            return
-        end
-        vim.cmd([[call fugitive#ReloadStatus()]])
-    end,
+vim.api.nvim_create_autocmd({ "FileType" }, {
     desc = "Automatically update git status shown in fugitive",
+    command = "call fugitive#ReloadStatus()",
     group = _auto_reload,
+    pattern = "fugitive",
 })
