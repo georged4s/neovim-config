@@ -28,6 +28,7 @@ return {
                         "^.git/",
                         "secret",
                         "node_modules/",
+                        ".*cache.*",
                         "Session.vim",
                         "target/index.html",
                         "target/manifest.json",
