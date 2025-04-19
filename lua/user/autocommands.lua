@@ -31,13 +31,13 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     desc = "Automatically wrap git commit message",
     command = "setlocal wrap",
     group = _git,
-    pattern = { "gitcommit" },
+    pattern = "gitcommit",
 })
 vim.api.nvim_create_autocmd({ "FileType" }, {
     desc = "Check spelling mistake in git commit message",
     command = "setlocal spell",
     group = _git,
-    pattern = { "gitcommit" },
+    pattern = "gitcommit",
 })
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
     desc = "Fugitive specific keymaps",
@@ -85,19 +85,19 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     desc = "Enable text wrapping in markdown files",
     command = "setlocal wrap",
     group = _markdown,
-    pattern = { "markdown" },
+    pattern = "markdown",
 })
 vim.api.nvim_create_autocmd({ "FileType" }, {
     desc = "Enable linebreak in markdown files",
     command = "setlocal linebreak",
     group = _markdown,
-    pattern = { "markdown" },
+    pattern = "markdown",
 })
 vim.api.nvim_create_autocmd({ "FileType" }, {
     desc = "Enable spelling checks in markdown files",
     command = "setlocal spell",
     group = _markdown,
-    pattern = { "markdown" },
+    pattern = "markdown",
 })
 
 -- Display
