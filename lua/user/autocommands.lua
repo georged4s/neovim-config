@@ -88,6 +88,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
                 filter = function(client)
                     return client.name == "null-ls"
                 end,
+                timeout_ms = 3000,
             })
         end, "Format")
         map("<leader>li", "<cmd>LspInfo<cr>", "Server Info")
