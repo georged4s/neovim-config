@@ -13,6 +13,7 @@ return {
                         command = os.getenv("HOME") .. "/miniconda3/envs/sqlfluff/bin/sqlfluff",
                         extra_args = { "--config", "$ROOT/dbt/.sqlfluff" },
                     }),
+                    diagnostics.yamllint,
                     formatting.shfmt,
                     formatting.black.with({ extra_args = { "--fast" } }),
                     formatting.prettierd,
