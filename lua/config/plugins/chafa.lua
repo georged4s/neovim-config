@@ -1,6 +1,7 @@
 return {
     {
         "princejoogie/chafa.nvim",
+        dependencies = { "m00qek/baleia.nvim" },
         opts = {
             render = {
                 min_padding = 5,
