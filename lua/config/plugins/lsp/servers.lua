@@ -84,7 +84,6 @@ return {
                         },
                     },
                 },
-                yamlls = {},
                 volar = {},
             }
 
