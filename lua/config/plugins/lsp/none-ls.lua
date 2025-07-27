@@ -11,7 +11,6 @@ return {
                 sources = {
                     diagnostics.sqlfluff.with({
                         command = os.getenv("HOME") .. "/miniconda3/envs/sqlfluff/bin/sqlfluff",
-                        extra_args = { "--config", "$ROOT/dbt/.sqlfluff" },
                     }),
                     diagnostics.yamllint,
                     formatting.shfmt,
@@ -20,7 +19,6 @@ return {
                     formatting.stylua,
                     formatting.sqlfluff.with({
                         command = os.getenv("HOME") .. "/miniconda3/envs/sqlfluff/bin/sqlfluff",
-                        extra_args = { "--config", "$ROOT/dbt/.sqlfluff" },
                     }),
                 },
             })
