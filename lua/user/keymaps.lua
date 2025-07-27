@@ -32,7 +32,7 @@ keymap("", "<C-w>-", "<C-w>K", opts)
 keymap("", "<C-w>|", "<C-w>H", opts)
 
 -- Disable Shift+K to open document
-keymap("n", "K", "<Nop>", opts)
+-- keymap("n", "K", "<Nop>", opts)
 
 -- Disable jumping to the next occurrence when matching current word
 keymap("n", "*", "<cmd>keepjumps normal! mi*`i<cr>", opts)
