@@ -10,7 +10,7 @@ return {
                 debug = false,
                 sources = {
                     diagnostics.sqlfluff.with({
-                        command = os.getenv("HOME") .. "/miniconda3/envs/sqlfluff/bin/sqlfluff",
+                        command = vim.fn.expand("~/miniconda3/envs/sqlfluff/bin/sqlfluff")
                     }),
                     diagnostics.yamllint,
                     formatting.shfmt,
@@ -18,7 +18,7 @@ return {
                     formatting.prettierd,
                     formatting.stylua,
                     formatting.sqlfluff.with({
-                        command = os.getenv("HOME") .. "/miniconda3/envs/sqlfluff/bin/sqlfluff",
+                        command = vim.fn.expand("~/miniconda3/envs/sqlfluff/bin/sqlfluff")
                     }),
                 },
             })
