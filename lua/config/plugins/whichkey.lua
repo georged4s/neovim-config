@@ -47,7 +47,7 @@ return {
                 { "<leader><space>", desc = "EasyMotion" },
 
                 {
-                    "<leader>",
+                    "<leader>d",
                     group = "Diff Files",
                     { "<leader>do", "<cmd>windo diffthis<cr>", desc = "Open Diff View" },
                     { "<leader>dc", "<cmd>windo diffoff<cr>",  desc = "Close Diff View" },
