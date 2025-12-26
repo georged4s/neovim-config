@@ -9,6 +9,7 @@ return {
                 "bash",
                 "c",
                 "cpp",
+                "css",
                 "dockerfile",
                 "lua",
                 "markdown",
@@ -22,6 +23,7 @@ return {
                 "yaml",
                 "vim",
                 "vue",
+                "xml",
             },
             highlight = {
                 enable = true,
