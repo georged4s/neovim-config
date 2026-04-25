@@ -18,11 +18,9 @@ return {
                 vim.keymap.set("n", "<C-k>", "", { buffer = bufnr })
                 vim.keymap.del("n", "<C-k>", { buffer = bufnr })
                 vim.keymap.set("n", "<C-x>", "", { buffer = bufnr })
-                vim.keymap.del("n", "<C-t>", { buffer = bufnr })
-                vim.keymap.set("n", "<C-t>", "", { buffer = bufnr })
                 vim.keymap.del("n", "<C-x>", { buffer = bufnr })
-                vim.keymap.set("n", "<C-]>", "", { buffer = bufnr })
-                vim.keymap.del("n", "<C-]>", { buffer = bufnr })
+                vim.keymap.set("n", "<C-t>", "", { buffer = bufnr })
+                vim.keymap.del("n", "<C-t>", { buffer = bufnr })
                 vim.keymap.set("n", "o", "", { buffer = bufnr })
                 vim.keymap.del("n", "o", { buffer = bufnr })
                 vim.keymap.set("n", "O", "", { buffer = bufnr })
@@ -90,7 +88,7 @@ return {
                     enable = true,
                     show_on_dirs = true,
                     icons = {
-                        hint = "",
+                        hint = "󰌵",
                         info = "",
                         warning = "",
                         error = "",
