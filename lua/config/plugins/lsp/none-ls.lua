@@ -20,6 +20,8 @@ return {
                     formatting.sqlfluff.with({
                         command = vim.fn.expand("~/miniconda3/envs/sqlfluff/bin/sqlfluff")
                     }),
+                    formatting.stylua,
+                    formatting.xmllint,
                 },
             })
         end,
