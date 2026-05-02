@@ -21,11 +21,23 @@ return {
     },
     {
         "saghen/blink.cmp",
-        event = 'VimEnter',
-        dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*' },
+        event = "VimEnter",
+        dependencies = {
+            "saghen/blink.lib",
+            "L3MON4D3/LuaSnip",
+            version = "v2.*",
+        },
+        build = function()
+            -- build the fuzzy matcher, wait up to 60 seconds
+            -- you can use `gb` in `:Lazy` to rebuild the plugin as needed
+            require("blink.cmp").build():wait(60000)
+        end,
+
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
         opts = {
             completion = {
-                documentation = { auto_show = true }
+                documentation = { auto_show = true },
             },
             sources = {
                 -- add lazydev to your completion providers
@@ -39,10 +51,9 @@ return {
                     },
                 },
             },
-            snippets = { preset = 'luasnip' },
+            snippets = { preset = "luasnip" },
             fuzzy = { implementation = "lua" },
-            signature = { enabled = true }
+            signature = { enabled = true },
         },
     },
-
 }
