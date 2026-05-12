@@ -5,16 +5,16 @@ return {
     {
         "RRethy/vim-illuminate",
         config = function()
-            require("illuminate").configure {
+            require("illuminate").configure({
                 filetypes_denylist = {
                     "dirbuf",
                     "dirvish",
                     "fugitive",
-                    "NvimTree"
+                    "NvimTree",
                 },
                 large_file_cutoff = 5000,
-            }
-        end
+            })
+        end,
     },
     -- sql editor
     "nanotee/sqls.nvim",
