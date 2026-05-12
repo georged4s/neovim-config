@@ -54,6 +54,9 @@ local options = {
 	-- guifont = "monospace:h17",               -- the font used in graphical neovim applications
 	-- whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
 	-- breakindent = true,
+    -- folding
+    foldlevelstart = 99, -- open all folds when opening a file
+
 }
 
 for k, v in pairs(options) do
