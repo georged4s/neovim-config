@@ -121,7 +121,16 @@ return {
                         prompt_title = "\\Search in Current Workspace/",
                         theme = "ivy",
                         layout_config = { height = 35 },
-                        vimgrep_arguments = { "rg" },
+                        vimgrep_arguments = {
+                            "rg",
+                            "--color=never",
+                            "--no-heading",
+                            "--with-filename",
+                            "--line-number",
+                            "--column",
+                            "--smart-case",
+                            "--sort=path",
+                        },
                         mappings = {
                             i = {
                                 ["<C-k>"] = lga_actions.quote_prompt(),
