@@ -2,8 +2,8 @@
 -- WXML files -> XML, WXSS files -> CSS
 
 vim.filetype.add({
-    extension = {
-        wxml = "xml",
-        wxss = "css",
-    },
+	extension = {
+		wxml = "xml",
+		wxss = "css",
+	},
 })
