@@ -32,7 +32,7 @@ Plugin spec imports: `config.plugins` then `config.plugins.lsp`.
 - **File explorer**: nvim-tree (toggle `<leader>e`)
 - **Search**: telescope + fzf + live-grep-args (rg-based)
 - **Code navigation**: telescope for references/definitions/implementations/symbols
-- **LSP keymaps**: `<leader>l` prefix (format, info, mason, null-ls, inlay hints). Standard `gd`, `gr`, `grn`, `gra`, `gri`, `grt`, `grD`, `gO`, `gW`. Diagnostics: `<leader>lj/k`, `gl`
+- **LSP keymaps**: `<leader>l` prefix (format, health, mason, null-ls, inlay hints). Standard `gd`, `gr`, `grn`, `gra`, `gri`, `grt`, `grD`, `gO`, `gW`. Diagnostics: `<leader>lj/k`, `gl`
 - **Git keymaps**: `<leader>g` prefix (blame, branches, commits, diff, status, log, hunk ops, browse). `(`/`)` for prev/next hunk. `gt`/`gy` for diffget
 - **Harpoon**: `<leader>h1`–`h9`, `ha` (add), `hh` (menu), `hn`/`hp` (nav)
 - **Quit**: `<leader>q` prefix (single/all windows). Uses `after/plugin/defaults.lua`
@@ -41,7 +41,7 @@ Plugin spec imports: `config.plugins` then `config.plugins.lsp`.
 - **J/k**: wrap-aware (gj/gk) with count support
 - **Markdown**: `<F6>` preview on, `<F7>` preview off
 - **Diagnostics**: signs + underline (errors only), no virtual text. Float on `gl`
-- **Formatting**: null-ls (none-ls) — black, prettierd, stylua, sqlfluff, shfmt, xmllint, yamllint
+- **Formatting**: null-ls (none-ls) — ruff, prettierd, stylua, sqlfluff, shfmt, xmlformatter, yamllint
 - **Auto**: foldlevelstart=99 (all folds open), autoread, cursorline, scrolloff=8
 - **Telescope file_ignore_patterns**: .git/, secret, node_modules/, .*cache.*, Session.vim, target/
 
@@ -52,7 +52,7 @@ Plugin spec imports: `config.plugins` then `config.plugins.lsp`.
 
 ## Troubleshooting
 
-- LSP not starting → `:Mason` to check installed tools, `:LspInfo` for status
+- LSP not starting → `:Mason` to check installed tools, `:checkhealth vim.lsp` for status
 - blink.cmp build failed → `:Lazy build blink.cmp`
 - fzf-native missing → `:Lazy build telescope-fzf-native.nvim`
 - Treesitter highlight broken → `:TSUpdate`
