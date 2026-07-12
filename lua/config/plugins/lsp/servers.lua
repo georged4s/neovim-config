@@ -32,9 +32,6 @@ return {
 				},
 				dockerls = {},
 				jsonls = {},
-				lemminx = {
-					filetypes = { "xml", "xsd", "xsl", "xslt", "svg", "wxml" },
-				},
 				ruff = {},
 				sqls = {
 					settings = {
