@@ -86,12 +86,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("<leader>lf", function()
 			vim.lsp.buf.format({
 				filter = function(client)
-					return client.name == "null-ls"
+					return client.name == "null-ls" or client.name == "ruff"
 				end,
 				timeout_ms = 3000,
 			})
 		end, "Format")
-		map("<leader>li", "<cmd>LspInfo<cr>", "Server Info")
+		map("<leader>li", "<cmd>checkhealth vim.lsp<cr>", "Server Info")
 		map("<leader>lm", "<cmd>Mason<cr>", "Mason")
 		map("<leader>ln", "<cmd>NullLsInfo<cr>", "NullLs")
 		map("<leader>lh", function()
