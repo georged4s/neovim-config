@@ -7,21 +7,18 @@ return {
 			local formatting = null_ls.builtins.formatting
 			local diagnostics = null_ls.builtins.diagnostics
 			null_ls.setup({
-				debug = false,
 				sources = {
 					diagnostics.sqlfluff.with({
 						command = vim.fn.expand("~/miniconda3/envs/dbt/bin/sqlfluff"),
 					}),
 					diagnostics.yamllint,
-					formatting.shfmt,
-					formatting.black.with({ extra_args = { "--fast" } }),
 					formatting.prettierd,
-					formatting.stylua,
+					formatting.shfmt,
 					formatting.sqlfluff.with({
 						command = vim.fn.expand("~/miniconda3/envs/dbt/bin/sqlfluff"),
 					}),
 					formatting.stylua,
-					formatting.xmllint,
+					formatting.xmlformatter,
 				},
 			})
 		end,
