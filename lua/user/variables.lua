@@ -1,5 +1,5 @@
 -- Set path to python interpreter
-vim.g.python3_host_prog = vim.fn.expand("~/miniconda3/envs/neovim/bin/python")
+vim.g.python3_host_prog = vim.fn.expand("~/.local/share/uv/tools/pynvim/bin/python")
 
 -- Prevent C-h C-j C-k C-l moving over the edge
 vim.g.tmux_navigator_no_wrap = 1
